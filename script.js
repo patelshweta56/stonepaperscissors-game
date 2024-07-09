@@ -2,29 +2,29 @@ let userScore = 0;
 let compScore = 0; 
 
 const choices = document.querySelectorAll(".choice");
-const msg = document.querySelector("#msg");
+const msgs = document.querySelector("#msg");
 
 const userScoreSpan = document.querySelector("#userscore");
 const compScoreSpan = document.querySelector("#compscore");
 
 // function for game win
-const showWinner = ((userWin, userChoice, compChoice) => {
+const showWinner = ((userWin, userChoice, computerChoice) => {
     if (userWin) {
         userScore++;
         userScoreSpan.innerHTML = userScore;
-        msg.innerHTML = `You win! Your ${userChoice} beats ${compChoice}`;
-        msg.style.backgroundColor = "green";
+        msgs.innerHTML = `You win!`;
+        msgs.style.backgroundColor = "green";
     } else {
         compScore++;
         compScoreSpan.innerHTML = compScore;
-        msg.innerHTML = `You lost. ${compChoice} beats your ${userChoice}`;
-        msg.style.backgroundColor = "red";
+        msgs.innerHTML = `You lost.`;
+        msgs.style.backgroundColor = "red";
     }  
 })
 
 // function for draw game
 const gameDraw = (() => {
-    msg.innerHTML = "Game is draw. Play again!";
+    msgs.innerHTML = "Game is draw. Play again!";
 })
 
 // function for computer choice
