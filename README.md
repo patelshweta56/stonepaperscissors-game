@@ -1,4 +1,4 @@
-A simple implementation of the classic Rock-Paper-Scissors game in [programming language].
+A simple implementation of the classic Rock-Paper-Scissors game.
 
 Game Rules
   * Rock beats Scissors
